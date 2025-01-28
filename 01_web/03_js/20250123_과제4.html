@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    아이디: <input type="text" id="user" /><br />
+    <button onclick="login()">로그인</button>
+
+    <script>
+      function login() {
+        const user = document.getElementById("user").value;
+
+        if (user == "admin") {
+          alert("브라우저에 관리자로 로그인하셨습니다.");
+        } else {
+          alert("브라우저에 일반 유저로 로그인이되었습니다.");
+        }
+      }
+
+      let trip = prompt("당신은 어디로 가고 싶나요?(산, 바다, 강 중 선택)");
+
+      if (trip == "산") {
+        alert("당신은 " + trip + "을 선택하셨군요!! 한라산을 가볼까요?");
+        location.href = "https://jeju.go.kr/hallasan/index.htm";
+      } else if (trip == "바다") {
+        alert("당신은 " + trip + "을 선택하셨군요!! 해운대를 가볼까요?");
+        location.href =
+          "https://busan.grandculture.net/Contents?local=busan&dataType=01&contents_id=GC04213540";
+      } else if (trip == "강") {
+        alert("당신은 " + trip + "을 선택하셨군요!! 한강을 가볼까요?");
+        location.href =
+          "https://www.ydp.go.kr/smartmedical-kor/contents.do?key=4498";
+      } else {
+        alert("잘못 선택하셨습니다.");
+      }
+    </script>
+  </body>
+</html>

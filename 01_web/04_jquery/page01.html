@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN은 제공이 되기 때문에 굳이 다운로드 안받아도 가능 -->
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <script>
+      $(function () {
+        alert("ok~~~")("#b1").click(function () {
+          alert("b1 클릭됨됨");
+        });
+      });
+
+      jQuery(document).ready(function () {
+        $("#b1").css("background", "yellow");
+      });
+      $(document).ready(function () {
+        $("#b2").css("background", "red");
+      });
+    </script>
+  </head>
+  <body>
+    <button id="b1">버튼</button>
+  </body>
+</html>

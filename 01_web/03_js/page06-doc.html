@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*css로 텍스트 스타일정의*/
+      .highlighted {
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+    <script>
+      console.log(1);
+      document.write("<h1> document.write()로 출력함 </h1>");
+    </script>
+  </head>
+  <body>
+    <script>
+      console.log(2);
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.getElementById("myElement").textContent = "새로운 텍스트";
+      });
+    </script>
+    <p id="myElement" class="highlighted">내가 브라우저에 써져요!</p>
+    <script>
+      console.log(3);
+      document.write("<h1> document.write()로 출력함 </h1>");
+    </script>
+  </body>
+</html>

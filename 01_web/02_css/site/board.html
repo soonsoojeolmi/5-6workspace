@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <style>
+      button {
+        background: white;
+        color: green;
+        font-weight: bold;
+      }
+      input {
+        background: pink;
+      }
+      td:hober {
+        background: lemonchiffon;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="total">
+      <div id="top">
+        <ul>
+          <li>
+            <a href="bootstrap_site.html"> Home</a>
+          </li>
+          <li>
+            <a href="member.html">회원가입</a>
+          </li>
+          <li>
+            <a href="product.html">제품정보</a>
+          </li>
+          <li>
+            <a href="board.html">게시판</a>
+          </li>
+          <li>
+            <a href="basket.html">장바구니</a>
+          </li>
+        </ul>
+      </div>
+      <div id="top2">장바구니에 담긴 물품수</div>
+      <div id="center">내용</div>
+      <form>
+        <table border="1">
+          <tr>
+            <td class="c1" style="color: black">항목</td>
+            <td class="c1" style="color: purple">입력</td>
+          </tr>
+          <tr>
+            <td>번호</td>
+            <td>
+              <input type="text" name="no" />
+            </td>
+          </tr>
+          <tr>
+            <td>제목</td>
+            <td>
+              <input type="text" name="title" />
+            </td>
+          </tr>
+          <tr>
+            <td>내용</td>
+            <td>
+              <input type="text" name="content" />
+            </td>
+          </tr>
+          <tr>
+            <td>작성자</td>
+            <td>
+              <input type="text" name="writer" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" id="foot">
+              <button>서버로 전송</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

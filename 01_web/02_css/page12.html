@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱태그 전체</title>
+    <style>
+        #logo{
+            float: left;
+        }
+        #login{
+            float: right;
+        }
+        header>h1{
+            float: left;
+            text-align: center;
+            margin-left: 40%;
+        }
+        header> ul{
+            clear: both;
+            list-style: none;
+        }
+        header>ul>li{
+            display: inline-block;
+        }
+
+        .navi{
+            list-style-type: none;
+            height: 40px;
+            padding: 0;
+            margin: 0;
+            background-color: royalblue;
+        }
+
+        .navi li{
+            float: left;
+            margin-right: 5%;
+            margin-left: 5%;
+            position: relative;
+            line-height: 40px;
+        }
+        .navi li a{
+            clear: both;
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+        }
+        .navi li a:hover{
+            color: orange;
+        }
+        
+        .navi li ul{
+            opacity: 0;/* 불투명도 지정 0-1*/
+            position: absolute;
+            left: 0;
+            width: 180px;
+            background: rgb(172, 184, 176);
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .navi li:hover ul{
+            opacity: 1;/*0.5*/
+        }
+
+        .navi li ul li{
+            float:none;/*li에 left 를 줬는 데 a태그에서만 clear 되어있는상태 */
+            height: 0;
+            line-height: 0;
+            background: none;
+        }
+        /*
+           navi 안에 있는 li 에  마우스를 오버하면  ul 안에 있는 모든 li에 속성추가 */
+            /*a b : a 안에있는 모든 b 를 선택. */
+        .navi li:hover ul li{
+            height: 30px;
+            line-height: 30px;
+            padding: 5px 0;
+        }
+
+        .navi li ul li a{
+            background: rgb(172, 184, 176);
+            font-weight: 600;
+            font-size: 14px;
+            color: rgb(7, 8, 77);
+        }
+        .navi li ul li a:hover{
+            background-color: rgb(7, 8, 77);
+
+        }
+        section.content{
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+            display: flex;
+            justify-content: center;/*컨테이너의 하위 item들을 가로로 가운데정렬 */
+        
+        }
+        footer{
+            width: 100%;
+            height: 80px;
+            padding-top: 3%;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id = 'logo' src="../img/ps.PNG" width=100px height="100px"/>
+        <h1>펭수 조아</h1>
+        <table id = "login">
+            <tr>
+                <td>아이디</td>
+                <td><input type ="text" name = "id" id = "id"></td>               
+            </tr>
+            <tr>
+                <td>패스워드</td>
+                <td><input type ="password" name = "pw" id = "pw"></td>               
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="로그인">
+                    <input type="reset" value="취소">
+                </td>
+
+            </tr>
+        </table>
+        <ul class ="navi">
+            <li><a href="#">메인</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자유게시판</a>
+                <ul>
+                    <li><a href ="">Q & A</a></li>
+                    <li><a href ="">방명록</a></li>
+                </ul>
+            </li>
+            <li><a href="#">갤러리</a></li>
+            <li><a href="#">회원관리</a></li>
+            <li><a href="#">채팅하기</a></li>
+
+        </ul>
+    </header>
+    <section class="content">
+       <!--content내용--> 
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ejcf_q6lOkw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></body>
+    </section>
+    <footer>
+        <p align =center>
+            Copyright © 2015-2025 UNI Information Educational Institute All Right Reserved
+        </p>
+    </footer>
+</body>
+</html>

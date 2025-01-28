@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/out2.js"></script>
+  </head>
+  <body>
+    <script>
+      for (let i = 0; i < 3; i++) {
+        document.write("@@@<br>");
+      }
+
+      const isJavaProgrammer = confirm("당신은 자바 프로그래머인가요?");
+
+      if (isJavaProgrammer) {
+        alert("훌륭한 웹 프로그래머이시군요!");
+      } else {
+        alert("다른 언어를 사용하시는 군요!");
+      }
+
+      let portal = prompt("당신이 주로 가는 포털 사이트는?");
+
+      if (portal == "naver") {
+        location.href = "http://www.naver.com";
+      } else if (portal == "daum") {
+        location.href = "http://www.daum.net";
+      } else {
+        location.href = "http://www.google.com";
+      }
+    </script>
+    <button onclick="travel()">travel!</button>
+    <button onclick="rest()">rest!</button>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간분할태그</title>
+</head>
+<body>
+    <h1>영역관련태그</h1>
+    <h2>div 와 span 태그 의 차이 1 : 줄바꿈 적용  </h2>
+
+    <h3>div태그</h3>
+
+    <p>div 태그영역은 이미 존재하는 태그 다음줄에 영역이 설정됨<br>
+        (block형식: 공간을 수직적으로 분할)
+    </p>
+    <div id = "div1" style="background-color: red;">
+        첫번째 영역
+    </div>
+    <div id = "div2" style="background-color: orange;">
+        두번째 영역
+    </div>
+    <div id = "div3" style="background-color: yellow;">
+        세번째 영역
+    </div>
+
+    <h3>span태그</h3>
+    <p>span 태그 영역은 줄바꿈이 일어나지 않고 옆으로 영역이 설정됨<br>
+        (inline 형식: 공간을 수평으로 분할)
+
+    </p>
+
+    <span id = "span1" style="background-color: red;">첫번째영역</span>
+    <span id = "span2" style="background-color: orange;">두번째영역</span>
+    <span id = "span3" style="background-color: yellow;">세번째영역</span>
+
+    <hr>
+
+    <h2>div 태그와 span 태그의 차이2: 영역지정방식</h2>
+    <b>div영역 : 사각형 박스로 영역을 지정</b>
+    <div style="background: yellow">
+        동해물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+        <br>
+        
+        남산 위에 저 소나무, 철갑을 두른 듯 <br>
+        바람서리 불변함은 우리 기상일세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+        <br>
+        
+        가을 하늘 공활한데 높고 구름 없이 <br>
+        밝은 달은 우리 가슴 일편단심일세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+        <br>
+        
+        이 기상과 이 맘으로 충성을 다하여 <br>
+        괴로우나 즐거우나 나라 사랑하세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>           
+    </div>
+
+    <br><br>
+
+    <b>span영역 : 문장 단위로 영역을 지정</b><br>
+    <span style="background:cyan">
+        동해물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+        <br>
+        
+        남산 위에 저 소나무, 철갑을 두른 듯 <br>
+        바람서리 불변함은 우리 기상일세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+        <br>
+        
+        가을 하늘 공활한데 높고 구름 없이 <br>
+        밝은 달은 우리 가슴 일편단심일세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+        <br>
+        
+        이 기상과 이 맘으로 충성을 다하여 <br>
+        괴로우나 즐거우나 나라 사랑하세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>   
+    </span>
+    <h3>iframe</h3>
+    <p>웹문서안에 다른 웹페이지를 추가하는 태그(inline 형식)</p> <!-- iframe : 웹 문서안에 다른 웹페이지를 추가하는 태그 -->
+    <iframe width="600px" height="800px" src="page10.html" frameborder="0"></iframe><!--frameborder 는 삭제될예정 api-->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN은 제공이 되기 때문에 굳이 다운로드 안받아도 가능 -->
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <script>
+      $(function () {
+        $("#b1").click(function () {
+          $.ajax({
+            url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.hankyung.com%2Ffeed%2Fit&api_key=m38waihthsn1ibkmpfgahbc1jy6divgenddzzg2n",
+            success: function (res) {
+              console.log(res);
+              list = res.items;
+              console.log(list);
+
+              $(list).each(function (index, news) {
+                console.log("index : " + index + "new.title");
+                console.log("index : " + index + "new.link");
+
+                let title = news.title;
+                let link = news.link;
+
+                let val = "<a href = " + link + " > " + title + "</a><br>";
+
+                $("#d1").append(val);
+              });
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="b1">한경it 비동기통신</button>
+    <hr />
+    <div id="d1"></div>
+  </body>
+</html>

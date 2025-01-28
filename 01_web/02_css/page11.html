@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱태그</title>
+    <style>
+        div{
+            border: 1px solid black;
+            text-align: center;
+        }
+        .wrap{
+           width: 500px; 
+           height: 600px;
+         /*  margin-left: auto;
+           margin-right: auto;*/
+           margin: 0 auto; /*한번에 중앙배치 */ 
+        }
+        .title{
+            width: 100%;
+            height: 20%;
+        }
+        .menubar{
+            width: 100%;
+            height: 10%;
+        }
+        .content{
+            width:79%;
+            height: 50%;
+            display: inline-block;/*영역은 인라인 요소로 변경되지만 내용은 블럭요소로 지정되어 width와 height 속정 지정가능하다.*/
+        }
+        .detail{
+            width:40%;
+            height: 100%;
+            display: inline-block;
+        }
+        .sidebar{
+            width: 19%;
+            height: 50%;
+            display: inline-block;
+        }
+        .information{
+            width:100%;
+            height: 10%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="title">헤더(머리부)</div>
+        <div class="menubar">메뉴바</div>
+        <div class="content">내용
+            <div class="detail">상세내용1</div>
+            <div class="detail">상세내용2</div>
+        </div>
+        <div class="sidebar">사이드바</div>
+        <div class="information">하단부</div>
+    </div>
+
+       <!-- 
+        시멘틱(Semantic) 태그 : 
+        웹 접근성 및 웹 문서의 구조화와 관련하여
+        기존에 div 형태로 나누었던 구조를 
+        별도의 태그 형식으로 정의한 태그들
+
+        <header> : 머릿글
+        <nav> : 주 메뉴
+        <section> : 주제 관련 내용-영역,계층
+        <article> : 주제 관련 글 하나하나의 내용
+        <aside> : 주제와 관련된 부가 내용, 관련 없는 내용
+        <footer> : 웹 문서의 저자, 저작권 등을 명시하는 내용
+    -->
+
+
+        
+</body>
+
+</html>

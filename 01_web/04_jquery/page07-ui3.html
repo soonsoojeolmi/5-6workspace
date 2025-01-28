@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery UI Accordion - Default functionality</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <head>
+    <style>
+      .newClass {
+        width: 100px;
+        height: 50px;
+        background: red;
+        border: 10px dotted lime;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        border: 1px solid #000;
+      }
+    </style>
+    <script>
+      $(function () {
+        let flag = false;
+
+        $("#eff1").click(function () {
+          // if(flag){
+          //     $('.b').removeClass('newClass')
+          //     $('.r').attr('checked', false)
+          //     flage = false
+          // }else{
+          //     $('.b').addClass('newClass')
+          //     $('.r').attr('checked', true)
+          //     flag=true
+          // }
+
+          $(".b").toggleClass("newClass", 1000);
+          $(".r").each(function () {
+            $(this).prop("checked", !$(this).prop("checked"));
+          });
+        });
+
+        $("#eff2").click(function () {
+          $("div").toggle("fold", 1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button class="b">확인버튼1</button>
+    <button class="b">확인버튼2</button>
+    <button class="b">확인버튼3</button>
+    <button class="b">확인버튼4</button>
+
+    <input type="radio" class="r" />등산 <input type="radio" class="r" />독서
+    <input type="radio" class="r" />노래
+    <hr />
+    <button id="eff1">Run Effect</button>
+
+    <button id="eff2">toggle the div</button>
+    <div></div>
+  </body>
+</html>

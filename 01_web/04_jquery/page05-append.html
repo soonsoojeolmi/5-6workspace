@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN은 제공이 되기 때문에 굳이 다운로드 안받아도 가능 -->
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <style>
+      img {
+        max-width: 200px;
+        display: block;
+        margin: 10px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#addImage").click(function () {
+          $("#output").append('<img src="img/red.png">');
+        });
+
+        $("#addcomment1").click(function () {
+          const comment = $("#comment1").val();
+          if (comment) {
+            $("#output").append("<p>" + comment + "</p>");
+          }
+        });
+
+        $("#addImangeComment").click(function () {
+          const comment = $("#comment2").val();
+          if (comment) {
+            $("#output").append('<img src="img/red.png">');
+            $("#output").append("<p>" + comment + "</p>");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="addImage">이미지 추가</button>
+    <br />
+    <input type="text" id="comment1" placeholder="댓글1" />
+    <button id="addComment1">댓글 추가</button>
+    <br />
+    <input type="text" id="comment2" placeholder="댓글2" />
+    <button id="addImageComment">이미지+댓글 추가</button>
+    <div id="output"></div>
+  </body>
+</html>

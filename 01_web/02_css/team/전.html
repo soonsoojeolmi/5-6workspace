@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전준혁의 취미</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: royalblue;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 10px; 
+      overflow: hidden; 
+    }
+
+    th, td {
+      border: 1px solid gainsboro;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: royalblue;
+      color: white;
+    }
+
+    td {
+      background-color: white;
+    }
+
+    td a {
+      color: deeppink;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    .share-hobby {
+      text-align: center;
+      margin: 40px 20px;
+    }
+
+    .share-hobby h2 {
+      margin-bottom: 20px;
+    }
+
+    .share-hobby input[type="text"] {
+      padding: 10px;
+      width: 70%;
+      max-width: 400px;
+      border: 1px solid slategray;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .share-hobby button {
+      background-color: forestgreen;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .share-hobby button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>나의 취미</h1>
+  </header>
+
+  <main>
+    <section>
+      <table>
+          <tr>
+            <th>취미</th>
+            <th>설명</th>
+            <th>관련 링크</th>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-film"></i> 영화보기</td>
+            <td>다양한 장르의 영화를 즐기며 시간을 보냅니다.</td>
+            <td><a href="https://www.imdb.com" target="_blank">IMDB 바로가기</a></td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-plane"></i> 여행가기</td>
+            <td>새로운 장소를 여행하고 다양한 문화를 경험합니다.</td>
+            <td><a href="https://www.skyscanner.co.kr/" target="_blank">skyscanner 바로가기</a></td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-chart-line"></i> 주식하기</td>
+            <td>투자를 통해 경제를 배우고 미래를 준비합니다.</td>
+            <td><a href="https://finviz.com/" target="_blank">finviz 바로가기</a></td>
+          </tr>
+      </table>
+    </section>
+
+    <section class="share-hobby">
+      <h2>당신의 취미는 무엇인가요?</h2>
+      <form>
+        <input type="text" id="hobby" name="hobby" placeholder="당신의 취미를 입력하세요">
+        <button type="submit">공유하기</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+
+
+
+  
+
+
+

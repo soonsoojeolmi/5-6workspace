@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function user() {
+        result1.innerHTML =
+          "<font color=blue>아이디 실패/재로그인해주세요.</font>";
+        setTimeout(go, 2000);
+      }
+
+      function go() {
+        location.href = "http://www.naver.com";
+      }
+
+      function naver() {
+        let naver = document.getElementById("naver").value;
+        location.href =
+          "https://kin.naver.com/search/list.naver?query=" + naver;
+      }
+    </script>
+  </head>
+  <body>
+    아이디 <input type="text" id="user" onblur="user()" />
+    <br />
+    <div id="result1"></div>
+    <hr />
+    지식인 검색어 <input type="text" id="naver" onblur="naver()" />
+    <hr />
+    보고 싶은 웹툰 입력 <input type="text" id="webtoon" onblur="webtoon()" />
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+        float: left;
+        padding: 15px;
+        width: 70px;
+        height: 20px;
+        border-radius: 50px;
+        text-align: center;
+        background: orange;
+      }
+      /* 
+      li:first-child {
+        border-radius: 50px 0 0 50px;
+        background: orange;
+      }
+      li:last-child {
+        border-radius: 0 50px 50px 0;
+      } */
+
+      li:nth-child(2n) {
+        background: yellow;
+      }
+      li:nth-child(2n-1) {
+        background: red;
+      }
+
+      a {
+        text-decoration: none;
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="page01.html">회원가입</a>
+      </li>
+      <li>
+        <a href="page02.html">제품정보</a>
+      </li>
+      <li>
+        <a href="page03.html">게시판</a>
+      </li>
+      <li>
+        <a href="page04.html">장바구니</a>
+      </li>
+    </ul>
+  </body>
+</html>

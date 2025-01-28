@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>검색할 단어를 입력하세요</h2>
+    <hr>
+    <form method="get">
+        검색할단어 <input type="text" name="query">
+        <input type="submit" value="검색시작">
+    </form>
+
+
+    <h2>로그인화면</h2>
+    <hr>
+    <form method="post">
+        아이디 <input type="text" name="id">
+        패스워드 <input type="password" name="password">
+        <input type="submit" value="로그인">
+    </form>
+
+
+    <hr>
+    <form method="get">
+
+    <h2>회원가입 화면</h2>
+    가입할 id <input type="text"name="id" ><br>
+    가입할 pw <input type="password" name="password"><br>
+    가입할 이름 <input type="text" name="username"><br>
+    성별 <input type="radio" name="g" value="M" checked>남
+    <input type="radio" name="g" value="F">여 <br>
+    취미 <input type="checkbox" name="h" value="달리기기"  checked>달리기
+    <input type="checkbox" name="h" value="동영상상">동영상보기
+    <input type="checkbox" name="h" value="서핑핑">인터넷서핑
+    <br>
+    전화번호 통신사 <select>
+        <option>SKT</option>
+        <option>LGT</option>
+        <option>KT</option>
+        <option selected>알뜰폰</option>
+    </select>
+    <input type="number"><br>
+    하고 싶은 말 <textarea cols="30" rows="5" placeholder="100글자로 써주세요."></textarea>
+
+    <input type="submit" value="회원가입">
+</form>
+
+
+    <h2>라디오 버튼과 체크박스 태그</h2>
+    <p>태그를 여러개 선언하여 하나의 용도로 사용할경우 name  속성의 값이 같아야한다.(name으로 그룹을만들어주는것)</p>
+    <form method="post">
+        <h3> type = "radio"</h3>
+        <label>성별</label>
+        <label>
+            <input type = "radio" id ="male" name="gender" value="M" > 남자
+        </label>
+
+        <input type="radio" id ="female" name = "gender" value="F"> 
+        <label for="female">여자</label>
+
+        <br>
+
+
+        <h3>type="checkbox"</h3>
+        <label>취미 : </label>
+        <input type="checkbox" id ="baseball" name = "hobby" value="baseball" checked>
+        <label for="baseball">야구</label>
+
+        <input type="checkbox" id ="basketball" name = "hobby" value="basketball" >
+        <label for="basketball">농구</label>
+
+        <input type="checkbox" id ="football" name = "hobby" value="football" >
+        <label for="football">축구</label>
+        <br>
+
+        <input type="submit" value="전송"> &nbsp;
+        <input type="reset" value="다시입력">
+
+
+    </form>
+</body>
+
+</html>

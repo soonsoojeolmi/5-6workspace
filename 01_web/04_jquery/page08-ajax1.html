@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN은 제공이 되기 때문에 굳이 다운로드 안받아도 가능 -->
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <script>
+      $(function () {
+        $("#b1").click(function () {
+          $.ajax({
+            url: "http://127.0.0.1:5500/tour.html",
+            success: function (res) {
+              alert(res);
+              $("#d1").html("응답받은 데이터는 " + res);
+            },
+            error: function (err) {
+              alert("통신실패" + err);
+            },
+          });
+        });
+
+        $("#b2").click(function () {
+          $.ajax({
+            url: "http://127.0.0.1:5500/ok.html",
+            success: function (res) {
+              alert(res);
+              $("#d2").html("응답받은 데이터는 " + res);
+            },
+            error: function (err) {
+              alert("통신실패" + err);
+            },
+          });
+        });
+
+        $("#b3").click(function () {
+          $.ajax({
+            url: "http://127.0.0.1:5500/weather.html",
+            success: function (res) {
+              alert(res);
+              $("#d3").html("응답받은 데이터는 " + res);
+            },
+            error: function (err) {
+              alert("통신실패" + err);
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="b1">내 서버 공공portal로 통신하기(tour)</button> <br />
+    <button id="b2">내 서버 ok.html로 통신하기</button> <br />
+    <button id="b3">내 서버 weather.html로 통신하기</button> <br />
+    <hr />
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+  </body>
+</html>

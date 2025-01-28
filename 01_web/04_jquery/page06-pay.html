@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN은 제공이 되기 때문에 굳이 다운로드 안받아도 가능 -->
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <script>
+      $(function () {
+        // $("#button").click(function (e) {
+        $("#paymentForm").on("submit", function (e) {
+          e.preventDefault(); // 폼의 기본 제출 동작을 방지
+          let money = $("#money").val();
+          let count = $("#count").val();
+
+          console.log(money);
+          cconsole.log(count);
+
+          if (isNaN(money) || isNaN(count)) {
+            alert("숫자를  입력해주세요");
+            return;
+          }
+
+          console.log("숫자 입력");
+
+          let money2 = parseInt(money);
+          let count2 = parseInt(count);
+
+          let result = money * count;
+          if (result <= 10000) {
+            alert("만원 이하입니다.");
+          } else if (result <= 20000) {
+            location.href = "https://shopping.naver.com/home/p/index.naver";
+          } else {
+            alert("소액결제만 가능합니다.  다시입력해주세요!!!");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="paymentForm">
+      하나당 가격:
+      <input
+        id="money"
+        name="money"
+        type="number"
+        value="10000"
+        required
+      /><br />
+      물건의 개수:
+      <input id="count" name="count" type="number" value="50" required /><br />
+      <button style="background: lime">결제하기</button>
+    </form>
+  </body>
+</html>

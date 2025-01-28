@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script>
+      console.log(1);
+      document.write("<h1> document.write()로 출력함 </h1>");
+    </script>
+  </head>
+  <body>
+    <h1 id="maintitle">querySelector 예제</h1>
+    <div class="box">
+      <p>이 문장은 <strong>박스</strong> 안에 있는 첫 번째 단락입니다.</p>
+      <p class="highlight">이 문장은 박스 안에 있는 강조된 단락입니다.</p>
+    </div>
+    <ul>
+      <li class="item">항목 1</li>
+      <li class="item highlight">항목 2</li>
+      <li class="item">항목 3</li>
+    </ul>
+    <button id="btn_style">강조 스타일 변경</button>
+
+    <script>
+      const maintitle = document.querySelector("#maintitle");
+      const highlight = document.querySelector(".highlight");
+      const firstItem = document.querySelector("ul>li.item");
+      const items = document.querySelectorAll("ul>li.item");
+
+      console.log(maintitle);
+      console.log(highlight);
+      console.log(firstItem);
+      console.log(items);
+
+      document.querySelector("#btn_style").addEventListener("click", () => {
+        highlight.style.backgroundColor = "red";
+        highlight.style.color = "white";
+      });
+    </script>
+  </body>
+</html>

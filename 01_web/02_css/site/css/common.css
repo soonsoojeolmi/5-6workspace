@@ -1,0 +1,53 @@
+div {
+  font-size: 15px;
+  font-weight: bold;
+  color: blue;
+}
+#total {
+  width: 100%;
+  background: lightcyan;
+  text-align: center;
+  margin: 0 auto;
+}
+#total table {
+  margin: 0 auto;
+}
+#top {
+  height: 100px;
+  background: lime;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+}
+li {
+  list-style: none;
+  float: left;
+  padding: 15px;
+  width: 70px;
+  height: 20px;
+  border-radius: 50px;
+  /* background: yellow; */
+}
+li:nth-child(2n) {
+  background: orange;
+}
+li:nth-child(2n + 1) {
+  background: yellow;
+}
+
+#top2 {
+  background-color: black;
+  color: yellow;
+  border-radius: 100px 10px;
+  width: 250px;
+  height: 100px;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+
+  display: flex;
+  /* 수직방향으로 정렬 */
+  align-items: center;
+  /* 수평방향으로 정렬 */
+  justify-content: center;
+}

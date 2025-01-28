@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    숫자1: <input type="text" id="n1" /><br />
+    숫자2: <input type="text" id="n2" /><br />
+    <button onclick="plus()">더하기</button>
+    <hr />
+    아이디: <input type="text" id="user" /><br />
+    패스워드: <input type="text" id="pw" /><br />
+    <button onclick="login()">로그인</button>
+
+    <script>
+      function plus() {
+        let n1 = document.getElementById("n1").value;
+        console.log(n1);
+        let n2 = document.getElementById("n1").value;
+        console.log(n1);
+
+        let result = parseInt(n1) + parseInt(n2);
+        console.log(result);
+      }
+
+      function login() {
+        let user = document.getElementById("user").value;
+        console.log(id);
+        let pw = document.getElementById("pw").value;
+        console.log(pw);
+
+        if ((user = "user") && (pw = "pw")) {
+          console.log("로그인하셨습니다.");
+        } else {
+          console.log("로그인 실패");
+        }
+      }
+    </script>
+  </body>
+</html>

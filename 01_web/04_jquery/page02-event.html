@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN은 제공이 되기 때문에 굳이 다운로드 안바다도 가능능 -->
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <script>
+      $(function () {
+        $("#b1").click(function () {
+          price = $("#price").val();
+          count = $("#count").val();
+          price2 = parseInt(price);
+          count2 = parseInt(count);
+          alert(price2 * count2);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    커피가격: <input type="text" id="price" /> <br />
+    커피수량: <input type="text" id="count" /> <br />
+    <button id="b1">커피 결제금액 확인</button>
+
+    <h3>select > option 태그의 상태에 대한 선택자</h3>
+    <select id="national">
+      <option value="한국" selected>한국</option>
+      <option value="미국">미국</option>
+      <option value="일본">일본</option>
+      <option value="중국">중국</option>
+    </select>
+    <label>선택한 나라 : </label><input type="text" id="result" />
+    <script>
+      "#national".change(selectChange);
+
+      function selectChange() {
+        let value = $("optional:selected").val();
+        console.log(value);
+
+        $("#result").val(value);
+      }
+    </script>
+  </body>
+</html>

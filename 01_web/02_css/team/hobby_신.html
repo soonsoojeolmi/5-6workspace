@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+            font-weight: bold;
+        }
+        hr{
+            background-color: gray;
+            width: 500px;
+            height: 3px;
+        }
+        td{
+            background-color: white;
+            text-align: center;
+            width: 100px;
+        }
+        #td{
+            font-weight: bold;
+            font-style: italic;
+        }
+        #td1{
+            background-color: aliceblue;
+        }
+        #td2{
+            background-color: antiquewhite;
+        }
+        .td3{
+            background-color: beige;
+        }
+        .td4{
+            background-color: gainsboro;
+            text-decoration: none;
+            font-size: 10px;
+        }
+        .td4:hover{
+            background-color: white;
+        }
+        .centered-content{
+            margin: auto;
+            text-align: center;
+        }
+        .centered-content table{
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>취미</h2>
+    <hr>
+    <div class="centered-content">
+        <table border="1">
+            <tr>
+                <td id="td"></td>
+                <td id="td">종류</td>
+                <td id="td">소요시간</td>
+                <td id="td">장소</td>
+            </tr>
+            <tr>
+                <td><img src="https://png.pngtree.com/element_our/20190528/ourmid/pngtree-handle-game-gray-hobby-icon-image_1185707.jpg" width="100"></img></td>
+                <td id="td1">게임</td>
+                <td id="td2">3시간</td>
+                <td class="td3">집</td>
+            </tr>
+            <tr>
+                <td><img src="https://img.vogue.co.kr/vogue/2016/03/style_56d7c79069e99.png" width="100"></img></td>
+                <td id="td1">영화보기</td>
+                <td id="td2">2시간</td>
+                <td class="td3">영화관</td>
+            </tr>
+            <tr>
+                <td><img src="data:image/png;base64,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" width="100"></img></td>
+                <td id="td1">보드게임</td>
+                <td id="td2">3시간</td>
+                <td class="td3">보드게임 카페</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="td4"><input type="button" value="돌아가기"></input></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

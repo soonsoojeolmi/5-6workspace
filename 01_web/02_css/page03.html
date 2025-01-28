@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+            이전으로 한 번 돌리고 싶을 때 : ctrl + z
+            다시 복기하고 싶을 때 : ctrl + y
+
+            tab - 오른쪽 블럭단위 이동(스페이스 4칸)
+            shift - 왼쪽으로 블럭 이동
+
+            alt + shift + f : 정리
+        */
+      body {
+        background-image: url(/img/car.png);
+        background-repeat: no-repeat; /* 반복되는 사진에 대한 설정 */
+      }
+      p {
+        background-image: url(truck.png);
+      } /*블록 형식, 해당하는 부분에만 적용용*/
+      span {
+        font-family: 궁서;
+        font-size: 60px;
+        color: red;
+        text-shadow: 3px 3px;
+      } /*인라인 형식*/
+      /*공통 속성으로 사이즈와 두께지정*/
+      .shadow {
+        font-size: 50px;
+        font-weight: 900;
+      }
+      /* 각 그림자효과*/
+      #ts1 {
+        color: orangered;
+        text-shadow: 5px 5px orange;
+      }
+      #ts2 {
+        color: white;
+        text-shadow: 0px 0px 20px black;
+      }
+      #ts3 {
+        color: white;
+        text-shadow: 10px 10px 20px yellowgreen;
+      }
+      #ts4 {
+        text-shadow: 0px 0px 4px grey, 0px -5px 4px yellow, 0px -10px 6px orange,
+          0px -15px 11px orangered, 0px -20px 18px red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      자동차는 빨간색이 좋아요 .. <span> 트럭 </span> 이 좋아요 <br />
+      자동차는 빨간색이 좋아요 .. 트럭이 좋아요 <br />자동차는 빨간색이 좋아요
+      .. 트럭이 좋아요 <br />자동차는 빨간색이 좋아요 .. 트럭이 좋아요 <br />
+    </p>
+    <h3>text-shadow 속성 : 텍스트에 그림자 효과를 줄 때 사용</h3>
+    <pre>
+        선택자{
+            text-shadow:none|가로거리 세로거리 번짐정도 색상;
+        }
+    </pre>
+    <div id="bg">
+      <span id="ts1" class="shadow">HTML5</span> <br /><br /><br />
+      <span id="ts2" class="shadow">HTML5</span> <br /><br /><br />
+      <span id="ts3" class="shadow">HTML5</span> <br /><br /><br />
+      <span id="ts4" class="shadow">HTML5</span>
+    </div>
+  </body>
+</html>

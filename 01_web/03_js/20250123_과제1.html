@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결제 확인</title>
+  </head>
+  <body>
+    <hr style="border: 2px solid red" />
+    구매상점: <input type="text" id="store" value="더조은샵" readonly /><br />
+    결제금액: <input type="text" id="amount" value="10000" readonly /><br />
+    입력수단 (1)계좌이체, (2)신용카드, (3)휴대폰결제<br />
+    <input type="text" id="method" /><br />
+    <button onclick="pay()">결제 버튼</button>
+    <hr style="border: 2px solid blue" />
+    <div id="result"></div>
+
+    <script>
+      function pay() {
+        let store = document.getElementById("store").value;
+        let amount = parseInt(document.getElementById("amount").value);
+        let method = parseInt(document.getElementById("method").value);
+        let finalAmount = amount;
+
+        // 결제수단 유효성 확인
+        if (method == 1) {
+          // 계좌이체
+        } else if (method == 2) {
+          // 신용카드
+          finalAmount += 1000;
+        } else if (method == 3) {
+          // 휴대폰결제
+          finalAmount += 500;
+        } else {
+          // 유효하지 않은 결제수단 처리
+          document.getElementById("result").innerText =
+            "결제수단을 올바르게 입력하세요 (1, 2, 3).";
+          return;
+        }
+
+        // 결과 출력
+        document.getElementById(
+          "result"
+        ).innerText = `${store}에서 ${finalAmount}원을 결제수단 ${method}번으로 결제하셨습니다.`;
+      }
+    </script>
+  </body>
+</html>

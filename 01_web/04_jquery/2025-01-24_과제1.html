@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>야구장을 찾다</title>
+  </head>
+  <style>
+    #maps {
+      display: flex;
+    }
+    .text {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <button id="b1">부산 사직야구장</button>
+    <button id="b2">서울 고척돔</button>
+
+    <div id="maps">
+      <div class="map-container">
+        <p>사직야구장 지도</p>
+        <div id="map1" style="width: 500px; height: 350px"></div>
+        <div id="d1"></div>
+      </div>
+      <div class="map-container">
+        <p>고척돔 지도</p>
+        <div id="map2" style="width: 500px; height: 350px"></div>
+        <div id="d2"></div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a772470967cc0306655d2c09a066c6e"
+    ></script>
+
+    <script>
+      // 지도 생성
+      var mapContainer1 = document.getElementById("map1"),
+        mapOption1 = {
+          center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+          level: 3, // 확대 레벨
+        };
+      var map1 = new kakao.maps.Map(mapContainer1, mapOption1);
+
+      var mapContainer2 = document.getElementById("map2"),
+        mapOption2 = {
+          center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+          level: 3, // 확대 레벨
+        };
+      var map2 = new kakao.maps.Map(mapContainer2, mapOption2);
+
+      // 사직 위치 데이터
+      var locations = {
+        sajik: { lat: 35.194722, lng: 129.061667 }, // 부산 사직야구장
+        gocheok: { lat: 37.498056, lng: 126.867222 }, // 서울 고척돔
+      };
+
+      // 마커 생성
+      var markerSajik = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(
+          locations.sajik.lat,
+          locations.sajik.lng
+        ), // 사직야구장 좌표
+        map: map1, // 지도를 설정
+      });
+
+      var markerGocheok = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(
+          locations.gocheok.lat,
+          locations.gocheok.lng
+        ), // 고척돔 좌표
+        map: map2, // 지도를 설정
+      });
+
+      // 버튼 클릭 시 지도 이동
+      document.getElementById("b1").addEventListener("click", function () {
+        var newPosition1 = new kakao.maps.LatLng(
+          locations.sajik.lat,
+          locations.sajik.lng
+        );
+        map1.setCenter(newPosition1); // 첫 번째 지도 중심 이동
+        markerSajik.setPosition(newPosition1); // 첫 번째 마커 위치 이동
+      });
+
+      document.getElementById("b2").addEventListener("click", function () {
+        var newPosition2 = new kakao.maps.LatLng(
+          locations.gocheok.lat,
+          locations.gocheok.lng
+        );
+        map2.setCenter(newPosition2); // 두 번째 지도 중심 이동
+        markerGocheok.setPosition(newPosition2); // 두 번째 마커 위치 이동
+      });
+    </script>
+    <script>
+      $(function () {
+        $("#b1").click(function () {
+          $("#d1").html(
+            "<h2>댓글보기</h2><p>2025년에는 가을야구다</p><p>투수가 잘해야한다</p>"
+          );
+        });
+      });
+
+      $(function () {
+        $("#b2").click(function () {
+          $("#d2").html(
+            "<h2>평점보기</h2>" +
+              '<img src="img/shrimp.jpg" width="150" height="150" />크림새우 ★★★☆☆<br>' +
+              '<img src="img/hyesung.jpg" width="150" height="150" />별자님 ★★★★★'
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
