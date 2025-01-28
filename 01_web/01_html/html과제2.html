@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>헬스 카페 가입 화면</title>
+  </head>
+  <body>
+    <h1>헬스카페 가입하기</h1>
+
+    <img src="img/bakibaki.jpg" alt="헬스카페 이미지" />
+
+    <form>
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="nickname">닉네임</label>
+      <input type="text" id="nickname" name="nickname" required /><br /><br />
+
+      <label for="goal">목표 감량</label>
+      <input
+        type="number"
+        id="goal"
+        name="goal"
+        placeholder="kg 단위"
+        required
+      /><br /><br />
+
+      <label for="location">운동 주로 하는 장소</label>
+      <select id="location" name="location">
+        <option value="공원">공원</option>
+        <option value="헬스장">헬스장</option>
+        <option value="집">집</option>
+        <option value="기타">기타</option></select
+      ><br /><br />
+
+      <h3>헬스카페 가맹 헬스장 목록</h3>
+      <ul>
+        <li>강남지점</li>
+        <li>강북지점</li>
+        <li>부산지점</li>
+        <li>여수지점</li>
+        <li>광주지점</li>
+        <li>제주도지점</li>
+      </ul>
+
+      <button type="submit">가입하기</button>
+    </form>
+  </body>
+</html>
