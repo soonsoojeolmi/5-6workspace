@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2_Event-답</title>
+  <style>
+    .area {
+      border: 1px solid red;
+      min-height: 200px;
+    }
+
+    td select,
+    td input {
+      width: 150px;
+    }
+
+    #money-before {
+      color: green;
+    }
+
+    #money-after {
+      color: red;
+    }
+
+    .view,
+    .edit {
+      height: 150px;
+      width: 400px;
+      font-family: sans-serif;
+      font-size: 14px;
+      display: block;
+    }
+
+    .view {
+      padding: 2px;
+      border: 1px solid black;
+    }
+
+    .edit {
+      border: 3px solid blue;
+      padding: 0px;
+    }
+
+    .edit:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <h3>문제 1</h3>
+  <p>
+    추가하기 버튼을 한 번 클릭하면 가로, 세로 100px, 1px의 직선 검은 테두리를 가진 빨간색 div를 area1 내부에 추가하고
+    한 번 더 클릭하면 같은 스타일의 노란색 div를 area1 내부에 추가한다.<br>
+    삭제하기 버튼을 누르면 마지막에 추가 된 div를 삭제한다.<br>
+    div는 수직이 아닌 수평으로 추가되어야 하며 삭제 된 div 이후에 추가 될 때도 빨간색과 노란색 div가 번갈아가며 추가 되어야 한다.
+  </p>
+  <button id="add">추가하기</button>
+  <button id="remove">삭제하기</button>
+  <div id="area1" class="area"></div>
+  <script>
+    // 코드 작성
+  </script>
+
+  <h3>문제 2</h3>
+  <p>
+    예금 이자 계산기를 만든다. 예치금액, 예치기간, 연이자율 값이 변경 될 때마다 계산 된 결과를
+    원금과 만기지급금액으로 표기한다.
+  </p>
+
+  <form name="calculator">
+    <table>
+      <tr>
+        <td>예치금액</td>
+        <td>
+          <input name="money" type="number" value="10000" required>
+        </td>
+      </tr>
+      <tr>
+        <td>예치기간</td>
+        <td>
+          <select name="months">
+            <option value="3">3 (최단 예치기간)</option>
+            <option value="6">6 (반년)</option>
+            <option value="12" selected>12 (1년)</option>
+            <option value="18">18 (1.5년)</option>
+            <option value="24">24 (2년)</option>
+            <option value="30">30 (2.5년)</option>
+            <option value="36">36 (3년)</option>
+            <option value="60">60 (5년)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>연이자율</td>
+        <td>
+          <input name="interest" type="number" value="5" required>
+        </td>
+      </tr>
+    </table>
+
+
+  </form>
+  원금 : <span id="money-before">10000</span>
+  만기지급금액 : <span id="money-after">10500</span>
+
+  <script>
+    // 코드 작성
+  </script>
+
+  <h3>문제 3</h3>
+  <p>
+    div를 클릭하면 textarea로 변경이 되고 그 안에서 값을 입력한 뒤
+    Enter를 누르거나 blur 이벤트가 발생하면 결과를 div 안에 저장한다.<br>
+    (HTML을 적으면 태그로 기능한다)<br>
+    * 참고 : textarea 태그를 만들면 edit이라는 클래스명을 부여해준다. (CSS 설정이 있음) <br>
+    node.replaceWith(노드나 문자열) 메소드를 사용해본다.
+  </p>
+  <div id="view" class="view">여기를 클릭해서 내용을 입력하세요.</div>
+
+  <script>
+    // 코드 작성
+  </script>
+
+</body>
+</html>

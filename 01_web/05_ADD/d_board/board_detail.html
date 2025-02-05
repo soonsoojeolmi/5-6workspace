@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 상세보기</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>게시글 상세보기</h1>
+    <div id="detailView">
+      <p id="detailTitle">제목:</p>
+      <p id="detailBody">내용:</p>
+      <button onclick="showEditForm()">수정하기</button>
+      <button onclick="deletePost()">삭제하기</button>
+      <button onclick="goToList()">목록으로</button>
+    </div>
+
+    <div id="comments">
+      <h2>댓글</h2>
+      <ul id="commentsList"></ul>
+
+      <h3>댓글 작성</h3>
+      <textarea id="commentInput" required>댓글을 입력하세요</textarea></label><br />
+      <button onclick="addComment()">댓글 등록</button>
+    </div>
+
+    <div id="editForm" class="hidden">
+      <h2>게시글 수정</h2>
+      <form onsubmit="updatePost(event)">
+        <label>제목: <input type="text" id="editTitle" required /></label><br />
+        <label>내용: <textarea id="editBody" required></textarea></label><br />
+        <button type="submit">저장</button>
+        <button type="button" onclick="cancelEdit()">취소</button>
+      </form>
+    </div>
+
+    <script>
+      const postId = new URLSearchParams(window.location.search).get("id");
+      const currentUserId = localStorage.getItem("currentUserId") || 1;
+
+      function loadPost() {
+        fetch(`http://localhost:3000/posts/${postId}`)
+          .then((response) => response.json())
+          .then((post) => {
+            document.getElementById(
+              "detailTitle"
+            ).innerText = `제목: ${post.title}`;
+            document.getElementById(
+              "detailBody"
+            ).innerText = `내용: ${post.body}`;
+          })
+          .catch((error) => console.error("게시글 로드 실패:", error));
+      }
+
+      function goToList() {
+        location.href = "board_list.html";
+      }
+
+      function loadComments(){
+        fetch(`http://localhost:3000/comments?postId=${postId}`)
+        .then((response) => response.json())
+          .then((comments) => {
+            const commentsList = document.getElementById("commentsList");
+              commentsList.innerHTML = "";
+              comments.forEach((comment)=>{
+                const li =document.createElement('li');
+                li.innerText=`${comment.body} (작성자 : ${comment.author})`
+                commentsList.appendChild(li)
+              })
+          })
+          .catch((error) => console.error("댓글 로드 실패:", error));
+      }
+
+      function addComment(){
+        const commentInput = document.getElementById("commentInput").value;
+
+        fetch("http://localhost:3000/comments", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            postId: postId,
+            body: commentInput,
+            author: currentUserId,
+          }),
+        })
+          .then((response) => response.json())
+          .then((comment) => {
+            console.log("댓글 등록 성공:", comment);
+            loadComments();
+            document.getElementById("commentInput").value = "";
+          })
+          .catch((error) => console.error("댓글 등록 실패:", error));
+      }
+
+      function showEditForm() {
+        document.getElementById("detailView").classList.add("hidden");
+        document.getElementById("editForm").classList.remove("hidden");
+        fetch(`http://localhost:3000/posts/${postId}`)
+          .then((response) => response.json())
+          .then((post) => {
+            document.getElementById("editTitle").value = post.title;
+            document.getElementById("editBody").value = post.body;
+          })
+          .catch((error) => console.error("수정 데이터 로드 실패:", error));
+      }
+
+      function cancelEdit() {
+        document.getElementById("editForm").classList.add("hidden");
+        document.getElementById("detailView").classList.remove("hidden");
+      }
+
+      function updatePost(event) {
+        event.preventDefault();
+        const title = document.getElementById("editTitle").value;
+        const body = document.getElementById("editBody").value;
+        fetch(`http://localhost:3000/posts/${postId}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ title, body, userId: currentUserId }),
+        })
+          .then((response) => response.json())
+          .then((post) => {
+            console.log("게시글 수정 성공:", post);
+            document.getElementById(
+              "detailTitle"
+            ).innerText = `제목: ${post.title}`;
+            document.getElementById(
+              "detailBody"
+            ).innerText = `내용: ${post.body}`;
+            cancelEdit();
+          })
+          .catch((error) => console.error("게시글 수정 실패:", error));
+      }
+
+      function deletePost() {
+        fetch(`http://localhost:3000/posts/${postId}`, { method: "DELETE" })
+          .then((response) => {
+            if (!response.ok)
+              throw new Error(`HTTP 에러! 상태 코드: ${response.status}`);
+            console.log("게시글 삭제 성공");
+            goToList();
+          })
+          .catch((error) => console.error("게시글 삭제 실패:", error));
+      }
+
+      loadPost();
+      loadComments()
+    </script>
+  </body>
+</html>

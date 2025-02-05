@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1_DOM-문제</title>
+    <style>
+        .area {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+        }
+
+        .first,
+        .second,
+        .third {
+            width : 100px;
+            height : 100px;
+            border : 1px solid black;
+            display : inline-block;
+            margin : 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3> 문제 1. input type="color" 태그로 색상 선택 후 변경 버튼을 클릭하면 하단 div의 색상이 변경되도록 만든다.</h3>
+    <div id="div1" class="area"></div>
+
+    <input type="color" id="selectColor">
+    <button onclick="colorChange();">변경</button>
+
+    <script>
+        function colorChange() {
+            // 코드 작성
+        }
+    </script>
+
+    <h3>문제 2. 버튼 클릭 시 하단 div의 크기가 조절 되도록 만든다.</h3>
+
+    <div id="div2" class="area"></div>
+    <button onclick="halfSize();">50x50</button>
+    <button onclick="defaultSize();">원본(100x100)</button>
+    <button onclick="doubleSize();">200x200</button>
+
+    <script>
+        
+        function halfSize() {
+            // 코드 작성
+        }
+        function defaultSize() {
+            // 코드 작성
+        }
+        function doubleSize() {
+            // 코드 작성
+        }
+    </script>
+
+    <h3>문제 3. 계산기 만들기</h3>
+    <p>
+        첫 번째 값과 두 번째 값을 입력 후 연산자 버튼 클릭 시 동작하는 calculator 함수를 만든다. 
+        함수의 매개변수로 연산자 버튼이 가지고 있는 value 값이 전달된다.
+    </p>
+
+    첫 번째 값 : <input id="num1">
+    두 번째 값 : <input id="num2">
+    <input type="button" value="+" onclick="calculator(this.value);">
+    <input type="button" value="-" onclick="calculator(this.value);">
+    <input type="button" value="x" onclick="calculator(this.value);">
+    <input type="button" value="/" onclick="calculator(this.value);">
+    <input type="button" value="%" onclick="calculator(this.value);">
+    계산 결과 : <span id="calc"></span>
+
+
+    <script>
+        function calculator(value) {
+            // 코드 작성
+        }
+    </script>
+
+    
+    <h3>문제 4-1. 버튼 클릭 시 아래 ul 태그(id:list)의 
+        하위 태그(li)를 모두 삭제하는 deleteList 함수를 만든다.</h3>
+    <button onclick="deleteList();">목록 삭제</button>
+    <ul id="list">
+        <li>의류</li>
+        <li>잡화</li>
+        <li>가전</li>
+        <li>가구</li>
+        <li>식품</li>
+        <li>레저</li>
+        <li>여가</li>
+        <li>도서</li>
+    </ul>
+    <script>
+        function deleteList() {
+            // 코드 작성
+        }
+    </script>
+
+    <h3>문제 4-2</h3>
+    <p>
+        버튼 클릭 시 "추가할 목록을 입력하세요"라는 prompt 창을 띄우고
+        입력 받은 값을 내부 텍스트로 하여 동적으로 li 요소 생성 후
+        위 ul 태그(id:list)의 하위 태그로 추가한다.<br>
+        입력하지 않고 취소 했을 시에는 추가하지 않는다.
+    </p>
+    <button onclick="createList();">목록 생성</button>
+    <script>
+        function createList(){
+            let content = prompt('추가할 목록을 입력하세요');
+
+            // 코드 작성
+        }
+    </script>
+
+    <h3>문제 5</h3>
+    <p>
+        왼쪽으로 버튼 클릭 시 하단의 first, second, third div가 한 칸씩 왼쪽으로 이동하게 하는 left 함수를 작성한다.<br>
+        Ex. first - second - third 인 상태에서 left 1번 클릭하면 second - third - first로 변경<br>
+        left 한 번 더 클릭하면 third - first - second 로 변경
+    </p>
+    <button onclick="left();">왼쪽으로</button>
+    <div id="area">
+        <div class="first">first</div>
+        <div class="second">second</div>
+        <div class="third">third</div>
+    </div>
+    <script>
+        function left(){
+            // 코드 작성
+        }
+    </script>
+
+</body>
+</html>

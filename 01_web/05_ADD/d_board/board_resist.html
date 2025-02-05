@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 등록</title>
+  </head>
+  <body>
+    <h1>게시글 등록</h1>
+    <form id="registForm">
+      <label>제목: <input type="text" id="postTitle" required /></label><br />
+      <label>내용: <textarea id="postBody" required></textarea></label><br />
+      <button type="submit">등록</button>
+      <button type="button" onclick="location.href='board_list.html'">
+        취소
+      </button>
+    </form>
+
+    <script>
+      const currentUserId = localStorage.getItem("currentUserId") || 1;
+
+      document
+        .getElementById("registForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const title = document.getElementById("postTitle").value;
+          const body = document.getElementById("postBody").value;
+
+          fetch("http://localhost:3000/posts", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ title, body, userId: currentUserId }),
+          })
+            .then((response) => response.json())
+            .then(() => (location.href = "board_list.html"))
+            .catch((error) => console.error("게시글 생성 실패:", error));
+        });
+    </script>
+  </body>
+</html>

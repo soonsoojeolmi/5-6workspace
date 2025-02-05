@@ -1,0 +1,185 @@
+{
+  "posts": [
+    {
+      "title": "두 번째 게시글",
+      "body": "이것은 두 번째 게시글의 내용입니다.",
+      "userId": "1",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "title": "세 번째 게시글",
+      "body": "이것은 세 번째 게시글의 내용입니다.",
+      "userId": 3
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "홍길동",
+      "email": "hong@example.com"
+    },
+    {
+      "id": "2",
+      "name": "제니",
+      "email": "kim@example.com"
+    },
+    {
+      "id": "3",
+      "name": "리사",
+      "email": "lee@example.com"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 3,
+      "body": "첫 번째 게시글의 첫 번째 댓글입니다.",
+      "author": "2"
+    },
+    {
+      "id": "2",
+      "postId": 1,
+      "body": "첫 번째 게시글의 두 번째 댓글입니다.",
+      "author": "3"
+    },
+    {
+      "id": "3",
+      "postId": 2,
+      "body": "두 번째 게시글의 첫 번째 댓글입니다.",
+      "author": "3"
+    },
+    {
+      "id": "ed65",
+      "postId": null,
+      "body": "댓글을 입력하세ㄴㄴㄴ요",
+      "author": "1"
+    },
+    {
+      "id": "8446",
+      "postId": null,
+      "body": "댓글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "1d43",
+      "postId": null,
+      "body": "댓글을 입력ㄴㄴㄴ하세요",
+      "author": "1"
+    },
+    {
+      "id": "c5b2",
+      "postId": null,
+      "body": "댓글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "ce30",
+      "postId": null,
+      "body": "댓글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "5d26",
+      "postId": null,
+      "body": "댓글ㄴㅋ을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "389b",
+      "postId": null,
+      "body": "댓글을 입력하세ㅊㅊ",
+      "author": "1"
+    },
+    {
+      "id": "6bee",
+      "postId": null,
+      "body": "댓글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "58bd",
+      "postId": null,
+      "body": "댓글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "b161",
+      "postId": null,
+      "body": "댓글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "4236",
+      "postId": null,
+      "body": "댓글을 입력ㅌㅌ하세요",
+      "author": "1"
+    },
+    {
+      "id": "6411",
+      "postId": null,
+      "body": "댓글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "edd5",
+      "postId": null,
+      "body": "댓글을 입력하ㅌㅌ요",
+      "author": "1"
+    },
+    {
+      "id": "61f9",
+      "postId": "2",
+      "body": "댓글을 입력ㅌㅌㅌ하세요",
+      "author": "1"
+    },
+    {
+      "id": "8f1f",
+      "postId": "2",
+      "body": "댓ㅇㅇ글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "2b36",
+      "postId": "2",
+      "body": "댓글을 입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "bb38",
+      "postId": null,
+      "body": "댓글을 ㄴㄴㄴ입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "b678",
+      "postId": null,
+      "body": "댓글을 ㄴㄴㄴ입력하세요",
+      "author": "1"
+    },
+    {
+      "id": "9310",
+      "postId": "2",
+      "body": "댓글을 입ㄴㄴㄴ력하세요",
+      "author": "1"
+    },
+    {
+      "id": "6797",
+      "postId": null,
+      "body": "댓글을 입력ㄴㄴㄴ하세요",
+      "author": "1"
+    },
+    {
+      "id": "5f0c",
+      "postId": null,
+      "body": "어머...",
+      "author": "1"
+    },
+    {
+      "id": "790d",
+      "postId": "2",
+      "body": "댓글을 입력ㅣㅣ하세요",
+      "author": "1"
+    }
+  ]
+}
