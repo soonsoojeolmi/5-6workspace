@@ -1,0 +1,100 @@
+public class Run3 {
+
+    public static void main(String[] args) {
+        Employee member1 = new Employee("m01", "p0112344", "제니", 10, 10000, 'F', "m@test.com");
+
+        Employee member2 = new Employee("m02", "p0211111", "리사", 10, 10000, 'F', "m2@test.com");
+
+        System.out.println(Employee.getTotalMembers());
+
+        System.out.println(Employee.getAvgSalary());
+
+}}
+class Employee {
+    private String id;
+    private String pwd;
+    private String name;
+    private int age;  
+    private double salary;  
+    private char gender;    
+    private String email;
+
+    private static int count;  
+    private static double sumSalary;  
+
+    public Employee() {
+
+        count++;
+    }
+    public Employee(String id, String pwd, String name, int age, double salary, char gender, String email) {
+        this.setId(id);
+        this.setPwd(pwd);
+        this.setName(name);
+        this.setAge(age);
+        this.setSalary(salary);
+
+        this.gender = gender;
+        this.email = email;
+        count++;
+    }
+    public static int getTotalMembers(){
+        return count;
+    }
+
+    public static double getAvgSalary(){
+        if(count == 0){
+            return 0;
+        }
+        return sumSalary / count;
+    }
+
+    public void setId(String id) {
+        if(id != null && !id.trim().isEmpty()){
+            this.id = id;
+        }else{
+            throw new IllegalArgumentException("필수 값");
+        }
+
+    }
+    public void setPwd(String pwd) {
+        if(pwd != null && pwd.trim().length() >=6 ){
+            this.pwd = pwd;
+
+        }else{
+            throw new IllegalArgumentException("비밀번호는 6자리 이상");
+        }
+
+    }
+
+
+    public void setName(String name) {
+        if(name != null && !name.trim().isEmpty()){
+            this.name = name;
+        }else{
+            throw new IllegalArgumentException("필수 값");
+        }
+    }
+    public void setAge(int age) {
+
+        if(age > 0){
+            this.age = age;
+        }else{
+            throw new IllegalArgumentException("나이는 0 이상");
+        }
+
+    }
+
+    public void setSalary(double salary) {
+        if(salary >= 0){
+            if(this.salary > 0){
+                sumSalary -= this.salary;
+            }
+            this.salary = salary;
+            sumSalary += salary;
+        }else{
+            throw new IllegalArgumentException(" 급여는 0 이상");
+
+        }
+    }
+   
+}
