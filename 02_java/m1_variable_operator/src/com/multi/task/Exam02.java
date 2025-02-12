@@ -1,4 +1,4 @@
-package com.multi.practice;
+package com.multi.task;
 
 public class Exam02 {
     public static void main(String[] args) {
