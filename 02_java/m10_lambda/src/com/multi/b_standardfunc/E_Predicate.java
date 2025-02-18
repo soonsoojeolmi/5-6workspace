@@ -1,5 +1,7 @@
 package com.multi.b_standardfunc;
 
+import com.uni.lambda.b_lambda.b_standard_func.dto.Student;
+
 import java.util.function.Predicate;
 
 public class E_Predicate {
@@ -10,7 +12,7 @@ public class E_Predicate {
      *
      */
 
-    public void method() {
+    public void method1() {
         Predicate<String> predicate = new Predicate<String>() {
             @Override
             public boolean test(String s) {
@@ -26,7 +28,13 @@ public class E_Predicate {
         Predicate<Integer> predicate2 = val -> val >1000;
         Predicate<Integer> predicate3 = val -> val >10;
 
-        boolean result = predicate2.and(predicate3).test(5);
-        System.out.println(result);
+        boolean result3 = predicate2.and(predicate3).test(5);
+        System.out.println(result3);
+
+        Predicate<Student> predicat4 = student -> student.getGender().equals("M");
+
+
+//        System.out.println("김원중은 남자입니가?"+predicate.test(student1)); // true
+//        System.out.println("구승민은 남자입니가?"+predicate.test(student2)); // false
     }
 }
