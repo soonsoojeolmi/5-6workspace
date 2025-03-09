@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+
+
+    <!--web.xml 파일 - 배포서술자(DD, Deployment Descriptor)라고 해서 웹 애플리케이션의 기본적인 설정을 위해
+        작성하는 파일
+     -->
+    <servlet>
+        <servlet-name>xmlmapping</servlet-name>
+        <servlet-class>com.multi.jsp03.b_lifecycle.LifeCycleTestXml</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>xmlmapping</servlet-name>
+        <url-pattern>/xmllifecycle</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>hi2</servlet-name>
+        <servlet-class>com.multi.jsp03.b_lifecycle.Hi2</servlet-class>
+        <init-param>
+            <param-name>tel</param-name>
+            <param-value>0104445555</param-value>
+        </init-param>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>a@naver.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hi2</servlet-name>
+        <url-pattern>/hi2</url-pattern>
+    </servlet-mapping>
+
+
+
+
+</web-app>

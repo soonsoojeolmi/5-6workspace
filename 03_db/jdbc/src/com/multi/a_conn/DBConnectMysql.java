@@ -31,10 +31,56 @@ public class DBConnectMysql {
 
             System.out.println("db 연결성공");
 
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+            con.setAutoCommit(false);
+            System.out.println("오토커밋 비활성화");
+
+            String sql = "insert into MEMBER values (null, 'user01', '운동이', '010', CURRENT_TIMESTAMP());";
+            ps = con.prepareStatement(sql);
+            System.out.println("sql 객체 생성 성공");
+
+            int result  = ps.executeUpdate();
+            System.out.println("sql 객체 생성 성공 결과 =>"+result);
+
+
+
+            String sql1 = "insert into MEMBER values (1, 'user01', '운동이', '010', CURRENT_TIMESTAMP());";
+            ps = con.prepareStatement(sql1);
+            System.out.println("sql 객체 생성 성공");
+
+            int result1 = ps.executeUpdate();
+
+            System.out.println("sql 객체 생성 성공 결과 =>"+result1);
+
+            // 트랜잭션 커밋
+            if (result >= 1 && result1 >= 1) {
+                System.out.println("데이터 입력 완료");
+                con.commit();
+                System.out.println("6. 트랜잭션 커밋 완료.");
+
+            }
+            // Query가 제대로 실행되지 않은 경우
+            else {
+                System.out.println("데이터 입력 실패");
+                con.rollback();
+            }
+
+        } catch (ClassNotFoundException | SQLException e) {
+            if (con != null) {
+                try {
+                    con.rollback(); // 예외 발생 시 롤백
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+
+                }
+                System.out.println("트랜잭션 롤백.");
+            }
+        }finally{
+            try {
+                ps.close();
+                con.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

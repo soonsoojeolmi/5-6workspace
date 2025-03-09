@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>회원 정보</h3>
+ <form action="insert.jsp">  
+아이디 : <input type="text" name="id"> <br>
+패스워드 : <input type="password" name="pwd"> <br>
+이름: <input type="text" name="name"> <br>
+취미:
+<!-- check box타입은 여러개 선택할 때 사용 -->
+	<input type="checkbox" name="hobby" value="등산">등산
+	<input type="checkbox" name="hobby" value="운동">운동
+	<input type="checkbox" name="hobby" value="독서">독서
+	<input type="checkbox" name="hobby" value="여행">여행
+<br>
+성별: 
+<!-- radio타입은 한 개만 선택할 때 사용 -->
+	<input type="radio" name="gender" value="남자">남자
+	<input type="radio" name="gender" value="여자">여자
+<br>
+종교:
+<!-- drop down메뉴는 select태그를 사용, 한 개만 선택(*)/여러 개 선택 -->
+<select name="religion">
+	<option value="기독교">기독교
+	<option value="불교">불교
+	<option value="천주교">천주교
+	<option value="무교">무교
+</select>
+<br>
+자기소개:
+<textarea rows="10" cols="20" name="introduction"></textarea> 
+<br>
+<button type="submit">서버로 전송</button>
+<button type="reset">지우기</button>
+</form>
+</body>
+</html>

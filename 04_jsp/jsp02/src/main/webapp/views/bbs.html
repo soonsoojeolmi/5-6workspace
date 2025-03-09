@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		/* css를 이용해서 스타일 지정 ==> body 선택해서 스타일 지정 */
+		/* 태그, id, class를 이용해서 선택할 수 있다.*/
+		*{
+			text-align: center;
+		}
+		body{
+			background: pink;
+		}
+		button {
+			width: 100px;
+			height: 30px;
+			color: blue;
+			background: yellow;
+		}
+		td{
+			width: 200px;
+			background: lightblue;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h3>게시판정보 페이지</h3>
+<hr color="blue">
+<a href="../index.html">첫페이지로 이동</a>
+<table border="1" align="center">
+	<tr>
+		<td>게시판글쓰기</td>
+		<td>
+			<a href="board_insert.html">
+					<button>GO</button>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>게시판삭제</td>
+		<td>
+			<a href="board_delete.html">
+					<button>GO</button>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>게시판수정</td>
+		<td>
+			<a href="baord_update.html">
+					<button>GO</button>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>게시판검색(한명)</td>
+		<td>
+			<a href="board_one.html">
+					<button>GO</button>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td>게시판검색(여러명)</td>
+		<td>
+			<a href="board_list.html">
+					<button>GO</button>
+			</a>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

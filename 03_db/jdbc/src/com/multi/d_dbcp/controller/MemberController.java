@@ -1,6 +1,12 @@
-package com.multi.c_jdbc.controller;
+package com.multi.d_dbcp.controller;
 
-import com.multi.c_jdbc.service.MemberService;
+import com.multi.d_dbcp.service.MemberService;
+import com.uni.jdbc2Template.member.model.dto.Member;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import static java.sql.DriverManager.getConnection;
 
 public class MemberController {
     /* 컨트롤러가 하는 역할은 뷰에서 사용자가 입력한 정보를 파라미터 형태로 전달받으면
@@ -18,7 +24,7 @@ public class MemberController {
 
     public void updateMember(Member member){
         Connection conn = getConnection();
-        int result = memberDAO.deleteMember
+        int result = memberDAO.deleteMember;
     }
 
 }

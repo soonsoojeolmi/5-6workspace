@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="jsp02:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="79bf2696-83e5-4f07-9083-3b89b9711414" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../03_db/jdbc/src/com/multi/a_conn/DBConnectMysql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03_db/jdbc/src/com/multi/d_dbcp/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03_db/jdbc/src/com/multi/d_dbcp/run/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03_db/jdbc/src/com/multi/d_dbcp/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03_db/jdbc/src/com/multi/d_dbcp/view/MemberMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsp05/src/main/webapp/chap01/ok.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsp05/src/main/webapp/chap01/ok.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsp05/src/main/webapp/chap01/tour.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsp05/src/main/webapp/chap01/weather.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsp05/src/main/webapp/chap01/weather.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsp05/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_db/.dbeaver/.project-metadata.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_db/.dbeaver/project-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_db/.dbeaver/project-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_db/Scripts/db_class/day03_dml.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_db/Scripts/db_class/day03_dml.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2u5fdsRB0yKevVsOOZB6mb6uZ9Q" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Smart Tomcat.Unnamed.executor": "Run",
+    "Tomcat Server.Tomcat 11.0.41.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sunsu/OneDrive/Desktop/VScode/5-6workspace/04_jsp/jsp02-1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sunsu\OneDrive\Desktop\VScode\5-6workspace\04_jsp\jsp02\src\main\webapp" />
+      <recent name="C:\Users\sunsu\OneDrive\Desktop\VScode\5-6workspace\04_jsp\jsp02\src\main\webapp\jsp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="com.poratu.idea.plugins.tomcat" nameIsGenerated="true">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="C:\Users\sunsu\.SmartTomcat\jsp02\jsp02" />
+      <option name="contextPath" value="/jsp02" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="port" value="8081" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/11.0.4" />
+          <option name="path" value="$PROJECT_DIR$/../../../../../../../../Program Files/apache-tomcat-11.0.4" />
+          <option name="version" value="11.0.4.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="jsp02" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79bf2696-83e5-4f07-9083-3b89b9711414" name="Changes" comment="" />
+      <created>1741543447626</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741543447626</updated>
+      <workItem from="1741543448765" duration="3102000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

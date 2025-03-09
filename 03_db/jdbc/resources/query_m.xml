@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment/>
+    <entry key="selectAll">
+        SELECT * FROM STUDENT
+    </entry>
+    <entry key="selectOne">
+        SELECT *
+        FROM STUDENT
+        WHERE USERID = ?
+    </entry>
+    <entry key="selectByName">
+        SELECT *
+        FROM STUDENT
+        WHERE USERNAME LIKE ?
+    </entry>
+    <entry key="insertMember">
+        INSERT INTO STUDENT
+        VALUES
+        (
+        NULL, ?, ?, ?, ?
+        , ?, ?, ?, ?,?, CURRENT_TIMESTAMP
+        )
+    </entry>
+    <entry key="updateMember">
+        UPDATE
+        STUDENT
+        SET PASSWORD = ?
+        , EMAIL = ?
+        , PHONE = ?
+        , ADDRESS = ?
+        WHERE USERID = ?
+    </entry>
+    <entry key="deleteMember">
+        DELETE FROM STUDENT WHERE USERID = ?
+    </entry>
+    <entry key="selectAllDeleteMember">
+        SELECT * FROM STUDENT_DEL
+    </entry>
+</properties>

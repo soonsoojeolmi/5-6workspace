@@ -1,0 +1,25 @@
+	public static void multiThreadQueryTest() {
+		for (int i = 0; i < THREAD_COUNT; i++) {
+
+
+			new Thread(() -> {
+				try {
+
+					System.out.println("Thread " + Thread.currentThread().getId() + " is querying all members.");
+					// 각 스레드가 1번을 선택한 것처럼 전체 조회를 수행
+					new MemberController().selectAll();
+
+
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}).start();		}
+
+				try {
+			Thread.sleep(5000);  // 5초 동안 대기
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("All threads have completed.");
+	}

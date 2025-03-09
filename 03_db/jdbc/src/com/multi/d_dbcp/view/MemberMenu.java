@@ -1,4 +1,4 @@
-package com.multi.c_jdbc.view;
+package com.multi.d_dbcp.view;
 
 import com.multi.c_jdbc.controller.MemberController;
 

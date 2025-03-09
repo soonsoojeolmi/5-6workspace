@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+function find(){
+	new daum.Postcode({
+        oncomplete: function(data) {
+        	console.log(data);
+            var roadAddr = data.roadAddress; // 도로명 주소 변수
+            var jibunAddr = data.jibunAddress; // 지번 주소 변수
+            document.getElementById('member_post').value = data.zonecode;
+            if(roadAddr !== ''){
+                document.getElementById("member_addr").value = roadAddr;
+            } 
+            else if(jibunAddr !== ''){
+                document.getElementById("member_addr").value = jibunAddr;
+            }
+        }
+    }).open();
+}
+</script>
+</head>
+<body>
+<p>카카오(다음) 주소찾기</p>
+<div>Company Address</div>
+  <input id="member_post"  type="text" placeholder="Zip Code" readonly onclick="find()">
+  <input id="member_addr" type="text" placeholder="Address" readonly> <br>
+  <input type="text" placeholder="Detailed Address">
+</body>
+</html>

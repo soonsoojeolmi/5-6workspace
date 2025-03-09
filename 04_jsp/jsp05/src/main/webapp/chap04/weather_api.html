@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>전국주간날씨</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript">
+        $(function(){    
+        	$('#b1').click(function() {
+        		 $.ajax({
+                     crossOrigin: true,    // 크로스도메인 해결 플러그인
+                     url: 'http://api.openweathermap.org/data/2.5/weather?q=seoul&units=metric&lang=kr&appid=본인키',
+                     dataType: 'json',
+                     success: function(x){
+                         console.log(x);
+                         alert(x.coord.lat)
+                     }
+                 })				
+			})
+        })
+        </script>
+    </head>
+    <body>
+    <button id="b1">날씨 알아오기(seoul)</button>
+    </body>
+</html>

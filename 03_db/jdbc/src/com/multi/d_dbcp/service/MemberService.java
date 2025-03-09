@@ -1,4 +1,4 @@
-package com.multi.c_jdbc.service;
+package com.multi.d_dbcp.service;
 
 /* Service 클래스에서 메소드 작성 방법
  * 1) Controller로 부터 인자를 전달받음
